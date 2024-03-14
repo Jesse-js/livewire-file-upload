@@ -27,6 +27,7 @@ class FileUploadForm extends Component
 
     public function submit(): void
     {
+        sleep(2);
         $validated = $this->validate();
 
         

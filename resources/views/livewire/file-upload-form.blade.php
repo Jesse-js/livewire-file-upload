@@ -45,7 +45,13 @@
                 <span class="text-success">Uploading...</span>
             </div>
         </div>
+        <div class="d-block mb-3">
+            <div wire:loading.delay wire:target="submit">
+                <span class="text-success d-block">Sending...</span>
+            </div>
+        </div>
 
-        <button wire:click="submit" type="submit" class="btn btn-primary mb-3">Submit</button>
+        <button wire:loading.class="btn-secondary" wire:loading.attr="disabled" wire:click="submit" type="submit" 
+        class="btn btn-primary mb-3">Create +</button>
     </div>
 </div>
