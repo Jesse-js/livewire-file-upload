@@ -35,11 +35,18 @@ class FileUploadForm extends Component
             $validated['image'] = $this->image->store('uploads', 'public');
         }
 
-        Person::create($validated);
+        $person = Person::create($validated);
 
         $this->reset(['name', 'email', 'password', 'image']);
 
         request()->session()->flash('success', 'Person created successfully!');
+
+        $this->dispatch('person-created', $person);
+    }
+
+    public function reloadList(): void 
+    {
+        $this->dispatch('person-created');
     }
 
     public function render(): View

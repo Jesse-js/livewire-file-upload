@@ -1,4 +1,5 @@
 <div class="mt-2">
+    <h2>People List</h2>
     <table class="table table-striped">
         <thead>
             <tr>

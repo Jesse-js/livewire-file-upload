@@ -1,4 +1,4 @@
-<div class="d-flex">
+<div class="d-flex flex-column align-items-center">
     @if (session('success'))
         <div class="alert alert-success mt-2" role="alert">
             {{ session('success') }}
@@ -50,6 +50,9 @@
                 <span class="text-success d-block">Sending...</span>
             </div>
         </div>
+
+        
+        <button type="button" @click="$dispatch('person-created')" class="d-block btn btn-primary mb-3">Reload List</button>
 
         <button wire:loading.class="btn-secondary" wire:loading.attr="disabled" wire:click="submit" type="submit" 
         class="btn btn-primary mb-3">Create +</button>
