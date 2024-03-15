@@ -1,10 +1,10 @@
-<div class="d-flex flex-column align-items-center">
+<div class="d-flex">
     @if (session('success'))
         <div class="alert alert-success mt-2" role="alert">
             {{ session('success') }}
         </div>
     @endif
-    <div class="content d-inline-block mt-2 border p-5">
+    <div class="content mt-2 border p-5">
         <h1 class="m-3 text-center border-bottom">Register Form</h1>
 
         <div class="mb-3">
