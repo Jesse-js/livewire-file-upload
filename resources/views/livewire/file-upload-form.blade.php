@@ -4,7 +4,7 @@
             {{ session('success') }}
         </div>
     @endif
-    <div class="content mt-2 border p-5" wire:keydown.enter.window="submit">
+    <div class="content mt-2 border p-5" wire:keydown.shift.enter.window="submit">
         <h1 class="m-3 text-center border-bottom">Register Form</h1>
 
         <div class="mb-3">
